@@ -1,0 +1,8 @@
+{
+    "greeting" : ["Bienvenido su idioma seleccionado es:"],
+    "Locale selected message" : ["Su idioma preferido ahora es español"],
+    "are you sure" : ["Esta seguro?"],
+    "What's your preferred language" : ["Cuál es su lenguage preferido?"],
+    "do you want change the locale" : ["Quieres cambiar el idioma?"],
+    "Your new locale is" : ["Su nuevo idioma es el español"]
+}
