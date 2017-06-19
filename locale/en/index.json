@@ -4,5 +4,7 @@
     "are you sure" : ["Are you sure?"],
     "What's your preferred language" : ["What's your preferred language?"],
     "do you want change the locale" : ["Do you want change the locale?"],
-    "Your new locale is" : ["Your new locale is English"]
+    "Your new locale is" : ["Your new locale is English"],
+    "the locale dont will be changed" : ["the locale don't will be changed"],
+    "bye" : ["bye!"]
 }

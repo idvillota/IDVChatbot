@@ -4,5 +4,7 @@
     "are you sure" : ["Esta seguro?"],
     "What's your preferred language" : ["Cuál es su lenguage preferido?"],
     "do you want change the locale" : ["Quieres cambiar el idioma?"],
-    "Your new locale is" : ["Su nuevo idioma es el español"]
+    "Your new locale is" : ["Su nuevo idioma es el español"],
+    "the locale dont will be changed" : ["El idioma no será cambiado"],
+    "bye" : ["chau!"]
 }

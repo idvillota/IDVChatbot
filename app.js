@@ -1,12 +1,11 @@
 var restify = require('restify');
 var builder = require('botbuilder');
 
-// Get secrets from server environment
 var botConnectorOptions = { 
-    appId: '83b0d9d4-b975-43ba-9406-24279b9a4120', 
-    appPassword:'w5C5gfsKuvtqjqhkRgWScfC'
-    //appId: process.env.MICROSOFT_APP_ID,
-    //appPassword: process.env.MICROSOFT_APP_PASSWORD
+    //appId: '83b0d9d4-b975-43ba-9406-24279b9a4120', 
+    //appPassword:'w5C5gfsKuvtqjqhkRgWScfC'
+    appId: process.env.MICROSOFT_APP_ID,
+    appPassword: process.env.MICROSOFT_APP_PASSWORD
 };
 
 // Create bot
@@ -14,7 +13,6 @@ var connector = new builder.ChatConnector(botConnectorOptions);
 
 var bot = new builder.UniversalBot(connector);
 
-///////////////////////////////
 var languages = [ "English", "Español" ];
 
 bot.dialog('/', [
@@ -35,12 +33,12 @@ bot.dialog('/changeLocaleDialog',[
         if(result.response){
             session.replaceDialog("/localePicker");
         }else{
-            session.send("No se cambiará el idioma");
+            session.send("the locale dont will be changed");
+            session.send("bye");
             session.endDialog();
         }
     }
 ]);
-
 
 bot.dialog('/localePicker',[
       function (session) {
@@ -59,6 +57,7 @@ bot.dialog('/localePicker',[
         session.preferredLocale(locale, function (err) {
             if (!err) {
                 session.send("Your new locale is");
+                session.send("bye");
                 session.endDialog();
             } else {
                 session.error(err);
@@ -66,10 +65,6 @@ bot.dialog('/localePicker',[
         });
     }
 ]);
-
-
-////////////////////////////////////
-   
 
 // Setup Restify Server
 var server = restify.createServer();
