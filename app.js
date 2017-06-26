@@ -1,5 +1,6 @@
 var restify = require('restify');
 var builder = require('botbuilder');
+const formflowbotbuilder = require('formflowbotbuilder');
 
 var botConnectorOptions = { 
     //appId: '83b0d9d4-b975-43ba-9406-24279b9a4120', 
@@ -13,58 +14,20 @@ var connector = new builder.ChatConnector(botConnectorOptions);
 
 var bot = new builder.UniversalBot(connector);
 
-var languages = [ "English", "Español" ];
+const myDialogName = 'getFields';
 
-bot.dialog('/', [
-    function(session){ 
-        session.send("greeting");
-        session.send(session.preferredLocale());
-        session.beginDialog('/changeLocaleDialog');
-    }
-]);
-
-bot.dialog('/changeLocaleDialog',[
-    function(session){
-        var answers = ["yes", "no"];
-        
-        builder.Prompts.confirm(session, "do you want change the locale", answers);
+formflowbotbuilder.executeFormFlow('./questions.json', bot, myDialogName, function (err, responses) {
+  if (err) {
+    console.log(err);
+  } else {
+    bot.dialog('/', [function (session) {
+      session.beginDialog(myDialogName);
     },
-    function(session, result){
-        if(result.response){
-            session.replaceDialog("/localePicker");
-        }else{
-            session.send("the locale dont will be changed");
-            session.send("bye");
-            session.endDialog();
-        }
-    }
-]);
-
-bot.dialog('/localePicker',[
-      function (session) {
-        builder.Prompts.choice(session, "What's your preferred language", languages, {listStyle: builder.ListStyle.button });
-    },
-    function (session, results) {
-        var locale;
-        switch (results.response.entity) {
-            case 'English':
-                locale = 'en';
-                break;
-            case 'Español':
-                locale = 'es';
-                break;
-        }
-        session.preferredLocale(locale, function (err) {
-            if (!err) {
-                session.send("Your new locale is");
-                session.send("bye");
-                session.endDialog();
-            } else {
-                session.error(err);
-            }
-        });
-    }
-]);
+      function (session, results) {
+        session.send('results: ' + JSON.stringify(responses));
+      }]);
+  }
+});
 
 // Setup Restify Server
 var server = restify.createServer();

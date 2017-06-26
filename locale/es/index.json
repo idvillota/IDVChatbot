@@ -1,10 +1,13 @@
 {
     "greeting" : ["Bienvenido su idioma seleccionado es:"],
-    "Locale selected message" : ["Su idioma preferido ahora es español"],
-    "are you sure" : ["Esta seguro?"],
-    "What's your preferred language" : ["Cuál es su lenguage preferido?"],
-    "do you want change the locale" : ["Quieres cambiar el idioma?"],
-    "Your new locale is" : ["Su nuevo idioma es el español"],
-    "the locale dont will be changed" : ["El idioma no será cambiado"],
-    "bye" : ["chau!"]
+    "Locale_selected_message" : ["Su idioma preferido ahora es español"],
+    "are_you_sure" : ["Esta seguro?"],
+    "What's_your_preferred_language" : ["Cuál es su lenguage preferido?"],
+    "do_you_want_change_the_locale" : ["Quieres cambiar el idioma?"],
+    "Your_new_locale_is" : ["Su nuevo idioma es el español"],
+    "the_locale_dont_will_be_changed" : ["El idioma no será cambiado"],
+    "bye" : ["chau!"],
+    "user_name": ["Nombre:"],
+    "user_document_number" : ["Número de Documento:"],
+    "user_phone_number" : ["Número de Teléfono:"]    
 }

@@ -1,0 +1,24 @@
+[
+    {
+        "id": "name",
+        "prompt": "Please enter a name",
+        "response": "Your name is %s",
+        "errorPrompt": "Please enter a string of > 0 characters",
+        "type": "text"
+    },
+    {
+        "id": "gender",
+        "prompt": "Please select a gender",
+        "response": "Your gender is %s",
+        "errorPrompt": "Please select one of the choides",
+        "type": "choice",
+        "choices": "Female|Male|Neutral"
+    },
+    {
+        "id": "email",
+        "prompt": "Please enter an email",
+        "response": "Your email is %s",
+        "errorPrompt": "Please enter a valid email",
+        "type": "email"
+    }
+]

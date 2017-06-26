@@ -1,10 +1,13 @@
 {
     "greeting" : ["Welcome your selectd language is:"],
-    "Locale selected message" : ["Your preferred language is now English"],
-    "are you sure" : ["Are you sure?"],
-    "What's your preferred language" : ["What's your preferred language?"],
-    "do you want change the locale" : ["Do you want change the locale?"],
-    "Your new locale is" : ["Your new locale is English"],
-    "the locale dont will be changed" : ["the locale don't will be changed"],
-    "bye" : ["bye!"]
+    "Locale_selected_message" : ["Your preferred language is now English"],
+    "are_you_sure" : ["Are you sure?"],
+    "What's_your_preferred_language" : ["What's your preferred language?"],
+    "do_you_want_change_the_locale" : ["Do you want change the locale?"],
+    "Your_new_locale_is" : ["Your new locale is English"],
+    "the_locale_dont_will_be_changed" : ["the locale don't will be changed"],
+    "bye" : ["bye!"],
+    "user_name": ["Name:"],
+    "user_document_number" : ["Document Number:"],
+    "user_phone_number" : ["Phone Number:"]    
 }

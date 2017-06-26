@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "botbuilder": "^3.8.4",
+    "formflowbotbuilder": "^0.1.4",
     "restify": "^4.3.0"
   }
 }
