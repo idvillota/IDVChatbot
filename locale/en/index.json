@@ -9,5 +9,17 @@
     "bye" : ["bye!"],
     "user_name": ["Name:"],
     "user_document_number" : ["Document Number:"],
-    "user_phone_number" : ["Phone Number:"]    
+    "user_phone_number" : ["Phone Number:"],
+    
+    "Your_name_is_%s": ["Your name is %s"],
+    "Please_enter_a_string_of_>_0_characters": ["Please enter a string of > 0 characters"],
+    "Please_select_a_gender": ["Please select a gender"],
+    "Your_gender_is_%s": ["Your gender is %s"],
+    "Please_select_one_of_the_choides": ["Please select one of the choides"],
+    "Please_enter_an_email": ["Please enter an email"],
+    "Your_email_is_%s": ["Your email is %s"],
+    "Please_enter_a_valid_email": ["Please enter a valid email"],
+    "Female": ["Female"],
+    "Male": ["Male"],
+    "Neutral": ["Neutral"]
 }

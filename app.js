@@ -14,6 +14,7 @@ var connector = new builder.ChatConnector(botConnectorOptions);
 
 var bot = new builder.UniversalBot(connector);
 
+//Set User properties
 const myDialogName = 'getFields';
 
 formflowbotbuilder.executeFormFlow('./questions.json', bot, myDialogName, function (err, responses) {
@@ -21,7 +22,12 @@ formflowbotbuilder.executeFormFlow('./questions.json', bot, myDialogName, functi
     console.log(err);
   } else {
     bot.dialog('/', [function (session) {
-      session.beginDialog(myDialogName);
+        
+        //var locale = 'en';
+        var locale = 'es';
+        session.preferredLocale(locale);
+        session.send(session.preferredLocale());
+        session.beginDialog(myDialogName);
     },
       function (session, results) {
         session.send('results: ' + JSON.stringify(responses));

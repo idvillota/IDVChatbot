@@ -9,5 +9,17 @@
     "bye" : ["chau!"],
     "user_name": ["Nombre:"],
     "user_document_number" : ["Número de Documento:"],
-    "user_phone_number" : ["Número de Teléfono:"]    
+    "user_phone_number" : ["Número de Teléfono:"],
+    
+    "Your_name_is_%s": ["Su nombre es %s"],
+    "Please_enter_a_string_of_>_0_characters": ["Por favor ingrese un string > 0 caracteres"],
+    "Please_select_a_gender": ["Por favor seleccione su genero"],
+    "Your_gender_is_%s": ["Su genero es %s"],
+    "Please_select_one_of_the_choides": ["Por favor seleccione una de las siguientes opciones"],
+    "Please_enter_an_email": ["Por favor digite su correo electrónico"],
+    "Your_email_is_%s": ["Su correo electrónico es %s"],
+    "Please_enter_a_valid_email": ["Por favor digite un correo electrónico valido"],
+    "Female": ["Femenino"],
+    "Male": ["Masculino"],
+    "Neutral": ["Neutro"]
 }
